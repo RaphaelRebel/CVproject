@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Homecontroller;
+use App\Http\Controllers\Cvcontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,5 +21,6 @@ use App\Http\Controllers\Homecontroller;
 Route::get('/', [HomeController::class, 'dashboard'])->middleware('auth')->name('dashboard');
 
 //CV inleveren
-
+Route::get('/cv/create', [CvController::class, 'cvcreate'])->name('cv-create');
+Route::post('/cv/create', [CvController::class, 'inputcreation'])->name('cv-store');
 require __DIR__.'/auth.php';
