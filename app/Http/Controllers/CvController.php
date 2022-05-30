@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Models\cv;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
 
 class CvController extends Controller
 {
@@ -32,6 +34,7 @@ class CvController extends Controller
         $cv->title= $cvdata['title'];
         $cv->description= $cvdata['description'];
         $cv->afbeelding = $cvdata['afbeelding'];
+        $cv->user_id = Auth::user()->id;
 
         $cv->save();
 
@@ -41,5 +44,10 @@ class CvController extends Controller
     public function cvsingle($id){
         $cv = cv::find($id);
         return view ('cvsingle', ['cv' => $cv]);
+    }
+
+    public function download($id){
+        $cv = cv::find($id);
+        return Storage::disk('public')->download($cv->afbeelding);
     }
 }

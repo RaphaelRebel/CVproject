@@ -25,4 +25,5 @@ Route::get('/cv/create', [CvController::class, 'cvcreate'])->name('cv-create');
 Route::post('/cv/create', [CvController::class, 'inputcreation'])->name('cv-store');
 
 Route::get('/cv/single/{id}', [CvController::class, 'cvsingle'])->name('cv-single');
+Route::get('/cv/single/download/{id}', [CvController::class, 'download'])->name('download-file');
 require __DIR__.'/auth.php';

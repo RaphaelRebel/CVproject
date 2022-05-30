@@ -5,16 +5,18 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
+
+
+                    <div class="single-container ">
+                        <ol class=" slides" id="change-overzicht">
                     @foreach($cv as $cvs)
+                        <div>
                         <h3>{{$cvs->title}}</h3>
+                            <p>{{$cvs->description}}</p>
                         <button><a href="cv/single/{{$cvs->id}}">Read more</a></button>
+                        </div>
                     @endforeach
-                </div>
-            </div>
-        </div>
+                        </ol>
+
     </div>
 </x-app-layout>

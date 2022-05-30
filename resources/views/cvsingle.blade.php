@@ -12,6 +12,7 @@
         <h2>{{$cv->title}}</h2>
         <p style="font-size: 12px">{{$cv->created_at}}</p>
         <p>{{$cv->description}}</p>
-        @if($cv->afbeelding) <img src="{{asset('storage/'. $cv->afbeelding)}}" alt="Afbeelding van de todo"> @endif
+        @if($cv->afbeelding) <img class="single-img" src="{{asset('storage/'. $cv->afbeelding)}}" alt="Afbeelding van de todo"> @endif
+        <a href="{{route('download-file', $cv->id)}}" class="btn btn-primary">Download</a>
     </div>
 </x-app-layout>

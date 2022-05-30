@@ -15,9 +15,9 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-responsive-nav-link :href="route('cv-create')" :active="request()->routeIs('cv-create')">
+                    <x-nav-link :href="route('cv-create')" :active="request()->routeIs('cv-create')">
                         {{ __('Cv aanmaken') }}
-                    </x-responsive-nav-link>
+                    </x-nav-link>
                 </div>
             </div>
 

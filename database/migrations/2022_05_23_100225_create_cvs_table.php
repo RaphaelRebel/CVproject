@@ -20,6 +20,7 @@ return new class extends Migration
             $table->text('description');
             $table->boolean('confirmed')->default(True);
             $table->string('afbeelding')->nullable();
+            $table->integer('user_id');
         });
     }
 
