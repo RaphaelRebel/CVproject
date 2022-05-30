@@ -37,4 +37,9 @@ class CvController extends Controller
 
         return redirect('/');
     }
+
+    public function cvsingle($id){
+        $cv = cv::find($id);
+        return view ('cvsingle', ['cv' => $cv]);
+    }
 }
