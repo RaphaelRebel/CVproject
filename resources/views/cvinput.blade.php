@@ -30,7 +30,7 @@
                         <!-- Foto -->
 
                         <div>
-                            <x-label for="afbeelding" :value="__('Afbeelding')"/>
+                            <x-label for="afbeelding" :value="__('CV')"/>
 
                             <x-input id="afbeelding" class="block h-20 mt-1 w-full" type="file" name="afbeelding"  required autofocus/>
                         </div>

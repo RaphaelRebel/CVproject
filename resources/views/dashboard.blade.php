@@ -11,6 +11,7 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     @foreach($cv as $cvs)
                         <h3>{{$cvs->title}}</h3>
+                        <button><a href="todo/{{$cvs->id}}">Read more</a></button>
                     @endforeach
                 </div>
             </div>
