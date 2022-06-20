@@ -12,7 +12,7 @@
                     @foreach($cv as $cvs)
                         <div>
                         <h3>{{$cvs->title}}</h3>
-                            @if( $cvs->user_id !== null)
+                            @if( $cvs->user_id == null)
                                 <p style="color: purple">{{$cvs->User->name}}</p>
                             @endif
                             <p>{{$cvs->description}}</p>

@@ -20,8 +20,8 @@ return new class extends Migration
             $table->text('description');
             $table->boolean('confirmed')->default(True);
             $table->string('afbeelding')->nullable();
-            $table->unsignedBigInteger('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('users_id')->nullable();
+            $table->foreign('users_id')->references('id')->on('users');
         });
     }
 

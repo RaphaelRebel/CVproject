@@ -46,7 +46,7 @@ class User extends Authenticatable
 
     public function cv()
     {
-        return $this->belongsTo(cv::class, 'user_id');
+        return $this->belongsTo(cv::class, 'users_id');
     }
     use HasFactory;
 
